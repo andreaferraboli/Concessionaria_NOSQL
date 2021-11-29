@@ -385,8 +385,8 @@ a:focus {
 /*---------------*/
 
 figure.effect-honey {
-    background: #4a3753;
-    max-width: 220px;
+    background: var(--custom-red);
+    max-width: 800px;
 }
 
 figure.effect-honey img {
@@ -417,7 +417,7 @@ figure.effect-honey h2 {
     left: 0;
     padding: 1em 1.5em;
     width: 100%;
-    text-align: left;
+    text-align: center;
     -webkit-transform: translate3d(0, -30px, 0);
     transform: translate3d(0, -30px, 0);
 }
