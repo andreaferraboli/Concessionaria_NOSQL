@@ -63,12 +63,15 @@ a:focus {
     background-color: var(--custom-red);
     padding: 14px 35px;
     border-radius: 30px;
+    position: relative;
+    align-items: center;
+    margin-right: 10%;
 }
 
 .tm-btn-primary:hover,
 .tm-btn-primary:focus {
-    color: black;
-    background-color: var(--custom-red);
+    color: var(--custom-red);
+    background-color:white;
 }
 
 
@@ -407,6 +410,7 @@ figure.effect-honey figcaption::before {
     height: 10px;
     background: var(--custom-red);
     content: "";
+    text-align: center;
     -webkit-transform: translate3d(0, 10px, 0);
     transform: translate3d(0, 10px, 0);
 }
@@ -424,6 +428,8 @@ figure.effect-honey h2 {
 
 figure.effect-honey h2 i {
     font-style: normal;
+    font-size: 60%;
+    text-align: left;
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
