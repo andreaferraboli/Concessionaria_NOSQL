@@ -15,7 +15,7 @@
   <h3 class="title">Vendi la tua auto!</h3>
 
   <div class="container">
-    <form action="/buycar.php">
+    <form method="post" action="php/sellcar.php">
       <label for="marca">Marca</label>
       <input placeholder="Inserisci la marca dell'auto" type="text" list="marca" required/>
       <datalist id="marca">
@@ -33,23 +33,23 @@
       <textarea placeholder="Inserisci il modello dell'auto" maxlength="15" id="modello" name="modello" rows="1"
         cols="1" required></textarea>
 
-      <label for="modello">Kilometraggio</label>
-      <textarea placeholder="Inserisci il kilometraggio dell'auto (Km)" maxlength="8" id="modello" name="modello" rows="1"
+      <label for="kilometraggio">Kilometraggio</label>
+      <textarea placeholder="Inserisci il kilometraggio dell'auto (Km)" maxlength="8" id="kilometraggio" name="kilometraggio" rows="1"
         cols="1" required></textarea>
 
-      <label for="modello">Condizione</label>
-      <select id="modello" name="condizione" required>
+      <label for="condizione">Condizione</label>
+      <select id="condizione" name="condizione" required>
         <option value="" disabled selected>Seleziona la condizione nuova|usata</option>
-        <option value="nuova">Nuova</option>
-        <option value="usata">Usata</option>
+        <option value="nuova">nuova</option>
+        <option value="usata">usata</option>
       </select>
 
-      <label for="modello">Cavalli</label>
-      <textarea placeholder="Inserisci il numero dei cavalli (CV)" maxlength="4" id="modello" name="modello" rows="1"
+      <label for="cavalli">Cavalli</label>
+      <textarea placeholder="Inserisci il numero dei cavalli (CV)" maxlength="4" id="cavalli" name="cavalli" rows="1"
         cols="1" required></textarea>
 
-      <label for="modello">Prezzo</label>
-      <textarea placeholder="Inserisci il prezzo (in euro)" maxlength="8" id="modello" name="modello" rows="1"
+      <label for="prezzo">Prezzo</label>
+      <textarea placeholder="Inserisci il prezzo (in euro)" maxlength="8" id="prezzo" name="prezzo" rows="1"
         cols="1" required></textarea>
 
       <input type="submit" value="Submit" />
