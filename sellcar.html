@@ -1,62 +1,64 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/sellcar.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <link rel="stylesheet" href="css/sellcar.css">
 </head>
+
 <body>
-<h3 style="font-family:'Arial Black';">Compra la tua auto!</h3>
 
-<div class="container">
-    <form action="/action_page.php">
+  <h3 class="title">Vendi la tua auto!</h3>
 
-        <label for="marca">Marca</label>
-        <input placeholder="Inserisci la marca dell'auto" type="text" list="marca" />
-        <datalist id="marca">
-            <option>Audi</option>
-            <option>BMW</option>
-            <option>Bugatti</option>
-            <option>Ferrari</option>
-            <option>Lamborghini</option>
-            <option>McLaren</option>
-            <option>Mercedes</option>
-            <option>Range Rover</option>
-        </datalist>
+  <div class="container">
+    <form action="/buycar.php">
+      <label for="marca">Marca</label>
+      <input placeholder="Inserisci la marca dell'auto" type="text" list="marca" required/>
+      <datalist id="marca">
+        <option>Audi</option>
+        <option>BMW</option>
+        <option>Bugatti</option>
+        <option>Ferrari</option>
+        <option>Lamborghini</option>
+        <option>McLaren</option>
+        <option>Mercedes</option>
+        <option>Range Rover</option>
+      </datalist>
 
-        <label for="modello">Modello</label>
-        <textarea placeholder="Inserisci il modello dell'auto" maxlength="15" id="modello" name="modello" rows="1" cols="1"></textarea>
+      <label for="modello">Modello</label>
+      <textarea placeholder="Inserisci il modello dell'auto" maxlength="15" id="modello" name="modello" rows="1"
+        cols="1" required></textarea>
 
-        <label for="modello">Kilometraggio</label>
+      <label for="modello">Kilometraggio</label>
+      <textarea placeholder="Inserisci il kilometraggio dell'auto (Km)" maxlength="8" id="modello" name="modello" rows="1"
+        cols="1" required></textarea>
 
-        <textarea placeholder="Inserisci il kilometraggio minimo" maxlength="8" id="kilometraggio-min" name="kilometraggio-minimo" rows="1" cols="1"></textarea>
-        <textarea placeholder="Inserisci i kilometraggio massimo" maxlength="8" id="kilometraggio-max" name="kilometraggio-massimo" rows="1" cols="1"></textarea>
+      <label for="modello">Condizione</label>
+      <select id="modello" name="condizione" required>
+        <option value="" disabled selected>Seleziona la condizione nuova|usata</option>
+        <option value="nuova">Nuova</option>
+        <option value="usata">Usata</option>
+      </select>
 
-        <label for="modello">Condizione</label>
-        <select id="modello" name="modello">
-            <option value="" disabled selected>Seleziona la condizione</option>
-            <option value="nuova">Nuova</option>
-            <option value="usata">Usata</option>
-        </select>
+      <label for="modello">Cavalli</label>
+      <textarea placeholder="Inserisci il numero dei cavalli (CV)" maxlength="4" id="modello" name="modello" rows="1"
+        cols="1" required></textarea>
 
-        <label for="modello">Cavalli</label>
+      <label for="modello">Prezzo</label>
+      <textarea placeholder="Inserisci il prezzo (in euro)" maxlength="8" id="modello" name="modello" rows="1"
+        cols="1" required></textarea>
 
-        <textarea placeholder="Inserisci i cavalli minimi" maxlength="4" id="cavalli-min" name="cavalli-minimi" rows="1" cols="1"></textarea>
-        <textarea placeholder="Inserisci i cavalli massimi" maxlength="4" id="cavalli-max" name="cavalli-massimi" rows="1" cols="1"></textarea>
-
-        <label for="modello">Prezzo</label>
-
-        <textarea placeholder="Inserisci il prezzo minimo" maxlength="6" id="prezzo-min" name="prezzo-minimo" rows="1" cols="1"></textarea>
-        <textarea placeholder="Inserisci il prezzo massimo" maxlength="8" id="prezzo-max" name="prezzo-massimo" rows="1" cols="1"></textarea>
-
-        <label for="modello">Anno</label>
-
-        <textarea placeholder="Inserisci l'anno minimo" maxlength="4" id="anno-min" name="prezzo-minimo" rows="1" cols="1"></textarea>
-        <textarea placeholder="Inserisci l'anno massimo" maxlength="4" id="anno-max" name="prezzo-massimo" rows="1" cols="1"></textarea>
-
-        <input type="submit" value="Submit"/>
-        <input type="reset" value="Reset"/>
-
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
     </form>
-</div>
+  </div>
+  <footer class="footer">
+    <a href="index.html" class="link-footer">home</a>
+  </footer>
 </body>
+
 </html>
