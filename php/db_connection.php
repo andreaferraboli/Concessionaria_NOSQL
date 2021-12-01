@@ -6,7 +6,7 @@ function OpenCon()
     $dbpass = "";
     $db = "macchine_tpi";
     if (!function_exists('mysqli_init') && !extension_loaded('mysqli')) {
-        echo 'We don\'t have mysqli!!!';
+        echo 'We don\'t have mysqliaa!!!';
     } else {
         echo 'Phew we have it!';
     }

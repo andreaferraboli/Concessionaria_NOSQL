@@ -2,7 +2,7 @@
 
 include 'db_connection.php';
 $conn = OpenCon();
-echo "Connected Successfully";
+echo "Connected Successfullydd";
 CloseCon($conn);
 
 
