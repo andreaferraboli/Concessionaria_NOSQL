@@ -1,8 +1,11 @@
 <?php
-// database connection code
-// $con = mysqli_connect('localhost', 'database_user', 'database_password','database');
 
-$con = mysqli_connect('localhost', '', '','macchine_tpi');
+include 'db_connection.php';
+$conn = OpenCon();
+echo "Connected Successfully";
+CloseCon($conn);
+
+
 
 // get the post records
 //$marca = $_POST['marca'];
