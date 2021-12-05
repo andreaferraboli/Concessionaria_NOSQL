@@ -2,63 +2,64 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-  <link rel="stylesheet" href="css/sellcar.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/sellcar.css">
+    <title>Vendi Auto</title>
 </head>
 
 <body>
 
-  <h3 class="title">Vendi la tua auto!</h3>
+<h3 class="title">Vendi la tua auto!</h3>
 
-  <div class="container">
+<div class="container">
     <form method="post" action="php/sellcar.php">
-      <label for="marca">Marca</label>
-      <input placeholder="Inserisci la marca dell'auto" type="text" list="marca" required/>
-      <datalist id="marca">
-        <option>Audi</option>
-        <option>BMW</option>
-        <option>Bugatti</option>
-        <option>Ferrari</option>
-        <option>Lamborghini</option>
-        <option>McLaren</option>
-        <option>Mercedes</option>
-        <option>Range Rover</option>
-      </datalist>
+        <label for="brand">Marca</label>
+        <!--select placeholder="Inserisci la marca dell'auto" type="text" list="marca" name="marca" required/>-->
+        <select id="brand" class='form-control' name="brand" required>
+            <option value="">-- Marca --</option>
+        </select>
 
-      <label for="modello">Modello</label>
-      <textarea placeholder="Inserisci il modello dell'auto" maxlength="15" id="modello" name="modello" rows="1"
-        cols="1" required></textarea>
 
-      <label for="kilometraggio">Kilometraggio</label>
-      <textarea placeholder="Inserisci il kilometraggio dell'auto (Km)" maxlength="8" id="kilometraggio" name="kilometraggio" rows="1"
-        cols="1" required></textarea>
+        <label>Modello</label>
+        <!--<textarea placeholder="Inserisci il modello dell'auto" maxlength="15" id="modello" name="modello" rows="1"
+          cols="1" required></textarea>-->
+        <select id="modello" class='form-control' name="modello" required>
+            <option value="">-- Modello --</option>
+        </select>
 
-      <label for="condizione">Condizione</label>
-      <select id="condizione" name="condizione" required>
-        <option value="" disabled selected>Seleziona la condizione nuova|usata</option>
-        <option value="nuova">nuova</option>
-        <option value="usata">usata</option>
-      </select>
 
-      <label for="cavalli">Cavalli</label>
-      <textarea placeholder="Inserisci il numero dei cavalli (CV)" maxlength="4" id="cavalli" name="cavalli" rows="1"
-        cols="1" required></textarea>
+        <label for="kilometraggio">Kilometraggio</label>
+        <textarea placeholder="Inserisci il kilometraggio dell'auto (Km)" maxlength="8" id="kilometraggio"
+                  name="kilometraggio" rows="1"
+                  cols="1" required></textarea>
 
-      <label for="prezzo">Prezzo</label>
-      <textarea placeholder="Inserisci il prezzo (in euro)" maxlength="8" id="prezzo" name="prezzo" rows="1"
-        cols="1" required></textarea>
+        <label for="condizione">Condizione</label>
+        <select id="condizione" name="condizione" required>
+            <option value="" disabled selected>Seleziona la condizione nuova|usata</option>
+            <option value="nuova">nuova</option>
+            <option value="usata">usata</option>
+        </select>
 
-      <input type="submit" value="Submit" />
-      <input type="reset" value="Reset" />
+        <label for="cavalli">Cavalli</label>
+        <textarea placeholder="Inserisci il numero dei cavalli (CV)" maxlength="4" id="cavalli" name="cavalli" rows="1"
+                  cols="1" required></textarea>
+
+        <label for="prezzo">Prezzo</label>
+        <textarea placeholder="Inserisci il prezzo (in euro)" maxlength="8" id="prezzo" name="prezzo" rows="1"
+                  cols="1" required></textarea>
+
+        <input type="submit" value="Submit"/>
+        <input type="reset" value="Reset"/>
     </form>
-  </div>
-  <footer class="footer">
+</div>
+<footer class="footer">
     <a href="index.html" class="link-footer">home</a>
-  </footer>
+</footer>
 </body>
-
 </html>
+<script src="js/sellcar.js" defer></script>

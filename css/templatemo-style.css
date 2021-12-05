@@ -16,7 +16,7 @@ html {
 
 body {
     background-color: black;
-    color:black;
+    color: black;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -50,8 +50,9 @@ a:focus {
 .tm-text-primary {
     color: var(--custom-red);
 }
+
 .tm-intro-text {
-    color:white;
+    color: white;
 }
 
 .tm-font-big {
@@ -71,7 +72,7 @@ a:focus {
 .tm-btn-primary:hover,
 .tm-btn-primary:focus {
     color: var(--custom-red);
-    background-color:white;
+    background-color: white;
 }
 
 
@@ -213,6 +214,7 @@ a:focus {
     .tm-hero-text-container-inner {
         margin-top: -40px;
     }
+
     .tm-intro-next {
         bottom: 20px;
     }
@@ -337,7 +339,7 @@ a:focus {
 }
 
 .grid figure figcaption,
-.grid figure figcaption>a {
+.grid figure figcaption > a {
     position: absolute;
     top: 0;
     left: 0;
@@ -351,7 +353,7 @@ a:focus {
 
 /* For some effects it will show as a button */
 
-.grid figure figcaption>a {
+.grid figure figcaption > a {
     z-index: 1000;
     text-indent: 200%;
     white-space: nowrap;
@@ -552,6 +554,7 @@ p {
     .tm-intro-text-container {
         padding-left: 65px;
     }
+
     .navbar-expand-md .navbar-nav .nav-link {
         padding-right: 30px;
         padding-left: 30px;
@@ -562,9 +565,11 @@ p {
     .container {
         max-width: 1275px;
     }
+
     .tm-container-gallery {
         max-width: 1290px;
     }
+
     .tm-container-contact {
         max-width: 1063px;
     }
@@ -578,11 +583,13 @@ p {
         margin-left: auto;
         margin-right: auto;
     }
+
     .tm-intro-img {
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
+
     .tm-btn-submit {
         margin-left: 0;
         margin-top: 20px;
@@ -594,15 +601,18 @@ p {
         margin-left: 20px;
         margin-top: 0;
     }
+
     .navbar-nav {
         max-width: 200px;
         text-align: right;
     }
+
     .navbar-collapse {
         background-color: rgb(255, 255, 255);
         padding: 10px;
         border-radius: 3px;
     }
+
     .navbar-collapse .nav-link {
         color: #8f8f8f;
     }
@@ -614,9 +624,11 @@ p {
         margin-left: auto;
         margin-right: auto;
     }
+
     .slick-dots li {
         margin: 0 8px;
     }
+
     .tm-gallery-item {
         margin: 0;
     }
