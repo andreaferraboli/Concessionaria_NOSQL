@@ -13,9 +13,9 @@
 <h3 class="title">Compra la tua auto!</h3>
 
 <div class="container">
-    <form action="php/buycar.php">
-        <label for="marca">Marca</label>
-        <select id="marca" name="marca">
+    <form method="post" action="buycarresults.php" >
+        <label for="brand">Marca</label>
+        <select id="brand" name="brand">
             <option value="qualsiasi">qualsiasi</option>
         </select>
         <label for="modello">modello</label>
@@ -29,8 +29,8 @@
         <label for="condizione">condizione</label>
         <select id="condizione" name="condizione">
             <option value="qualsiasi">qualsiasi</option>
-            <option value="nuovo">nuovo</option>
-            <option value="usato">usato</option>
+            <option value="nuova">nuova</option>
+            <option value="usata">usata</option>
         </select>
         <label for="cavalli">cavalli</label>
         <select id="cavalli" name="cavalli">
@@ -38,21 +38,20 @@
         </select>
 
         <div data-role="main" class="ui-content">
-            <form method="post">
                 <div data-role="rangeslider">
                     <label for="price-min">Price:</label>
                     <input type="range" name="price-min" id="price-min" value="10000" min="0" max="50000" class="input">
                     <input type="range" name="price-max" id="price-max" value="150000" min="0" max="500000"
                            class="input">
                 </div>
-            </form>
         </div>
-
         <input type="submit" value="Submit"/>
+        <input type="reset" value="Reset"/>
     </form>
 </div>
 <footer class="footer">
-    <a href="index.html" class="link-footer">home</a>
+    <a href="index.html" TARGET="_self" class="link-footer">home</a>
 </footer>
 </body>
 </html>
+<script src="js/buycar.js" defer></script>
