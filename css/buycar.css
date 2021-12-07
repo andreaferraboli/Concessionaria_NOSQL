@@ -61,3 +61,45 @@ label {
     min-width: 6%;
     margin-outside: 1%;
 }
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: arial;
+    background-color: rgba(0, 0, 0, 0.76);
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+}
+.information{
+    color: white;
+    background-color: #000;
+    text-align: center;
+}
+.card button:hover {
+    opacity: 0.7;
+}
+.carCard{
+    width: 33.33%;
+    background-color: rgba(255, 255, 255, 0.76);
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
