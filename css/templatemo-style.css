@@ -1,13 +1,6 @@
-/*
-
-The Town
-
-https://templatemo.com/tm-525-the-town
-
-*/
 
 :root {
-    --custom-red: #8a0303;
+    --custom-red: rgb(138, 3, 3);
 }
 
 html {

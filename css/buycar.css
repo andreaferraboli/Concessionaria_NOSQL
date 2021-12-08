@@ -1,3 +1,5 @@
+
+
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -53,7 +55,6 @@ input[type=submit]:hover {
 }
 
 label {
-    color: white;
     font-family: "Lucida Console", Courier, monospace;
 }
 
@@ -61,45 +62,65 @@ label {
     min-width: 6%;
     margin-outside: 1%;
 }
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    text-align: center;
-    font-family: arial;
-    background-color: rgba(0, 0, 0, 0.76);
+.containerCard {
+    background-color: rgba(0, 0, 0, 0.72);
+    margin:auto;
 }
-
 .price {
-    color: grey;
+    color: rgb(138, 3, 3);
     font-size: 22px;
+    text-shadow: 0 1px 0 rgba(255, 210, 0, 0);
 }
 
-.card button {
+.cardButton {
     border: none;
     outline: 0;
-    color: white;
-    background-color: #000;
+    color:black;
+    background-color: rgb(138, 3, 3) !important;
     text-align: center;
     cursor: pointer;
     font-size: 18px;
 }
 .information{
-    color: white;
-    background-color: #000;
+    color: rgb(138, 3, 3);
     text-align: center;
-}
-.card button:hover {
-    opacity: 0.7;
-}
-.carCard{
-    width: 33.33%;
-    background-color: rgba(255, 255, 255, 0.76);
-    text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-/* Clear floats after the columns */
+    text-shadow: 0 1px 0 rgba(255, 210, 0, 0);
 
+}
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 30%;
+    padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 5% 5% 5% 5%;}
+
+/* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
+}
+
+/* Style the counter cards */
+.card {
+    padding: 16px;
+    text-align: center;
+    background-color: #000000;
+}
+.cardH1{
+    color: rgb(138, 3, 3) ;
+    text-shadow: 0 1px 0 rgba(255, 210, 0, 0);
+
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
 }
