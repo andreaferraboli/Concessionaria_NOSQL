@@ -18,7 +18,7 @@
     $kilometraggio = $_POST['kilometraggio'];
     $cavalli = $_POST['cavalli'];
     $prezzo = $_POST['prezzo'];
-    $conn = new mysqli('127.0.0.1', 'root', '', 'macchine_tpi');
+    $conn = new mysqli('localhost', 'root', '', 'macchine_tpi');
     if ($conn->connect_error) {
         echo "$conn->connect_error";
         die("Connection Failed : " . $conn->connect_error);

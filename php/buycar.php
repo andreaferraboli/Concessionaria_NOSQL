@@ -16,7 +16,7 @@ $kilometraggio = $_POST['kilometraggio'];
 $cavalli = $_POST['cavalli'];
 $prezzo_min = $_POST['price-min'];
 $prezzo_max = $_POST['price-max'];
-$conn = new mysqli('127.0.0.1', 'root', '', 'macchine_tpi');
+$conn = new mysqli('localhost', 'root', '', 'macchine_tpi');
 if ($conn->connect_error) {
     echo "$conn->connect_error";
     die("Connection Failed : " . $conn->connect_error);
@@ -28,26 +28,31 @@ if ($conn->connect_error) {
 // output data of each row
         $numberElements = 0;
         echo '<div class="containerCard">';
+
         while ($row = $result->fetch_assoc()) {
             $nameCar = $row["brand"] . "-" . $row["modello"];
             if ($numberElements % 3 == 0)
                 echo '<div class="row">';
             echo '<div class="column">';
             echo '<div class="card">';
-            echo '<h1 class="cardH1">' . $nameCar . "</h1>";
+            echo '<form method="get" action="boughtCar.php" >';
+            echo '<h1 class="cardH1" name="id1" id="id1">' . $row["id_macchina"] . "</h1>";
+            echo '<h1 class="cardH1" name="brand1" id="brand1">' . $row["brand"] . "</h1>";
+            echo '<h1 class="cardH1" name="modello1" id="modello1">' . $row["modello"] . "</h1>";
             echo '<img src="car/' . $row["modello"] . '.jpg" alt="' . $nameCar . '" style="width:100%">';
-            echo '<p class="price">' . $row["prezzo"] . " €</p>";
-            echo '<p class="information">condizione:' . $row["condizione"] . "</p>";
-            echo '<p class="information">cavalli:' . $row["cavalli"] . "</p>";
-            echo '<p class="information">kilometraggio:' . $row["kilometraggio"] . "</p>";
-            echo '<button class="cardButton" >Compra Macchina</button>';
+            echo '<p class="price" name="prezzo1" id="prezzo1">' . $row["prezzo"] . " €</p>";
+            echo '<p class="information" name="condizione1" id="condizione1">condizione:' . $row["condizione"] . "</p>";
+            echo '<p class="information" name="cavalli1" id="cavalli1">cavalli:' . $row["cavalli"] . "</p>";
+            echo '<p class="information" name="kilometraggio1" id="kilometraggio1">kilometraggio:' . $row["kilometraggio"] . "</p>";
+            echo '<input type="submit" value="Compra Macchina" class="cardButton" ></input>';
+//            echo '<button class="cardButton" />Compra Macchina</button>';
+            echo "</form>";
             echo "</div>";
             echo "</div>";
             if ($numberElements % 3 == 2)
                 echo "</div>";
             $numberElements++;
         }
-        echo "</div>";
         echo "</div>";
     } else {
         echo "0 results";
