@@ -27,13 +27,11 @@ $brand1='"'.$brand.'"';
 $modello1='"'.$modello.'"';
 $condizione1='"'.$condizione.'"';
 $sql = 'UPDATE macchine SET brand='.$brand1.', modello='.$modello1.', condizione='.$condizione1.', kilometraggio='.$kilometraggio.', cavalli='.$cavalli.', prezzo='.$prezzo.' WHERE id_macchina='.$id;
-echo '<h1 >' . $sql."</h1>";
 if ($conn->query($sql) === TRUE) {
     $nameCar = $brand . "-" . $modello;
     echo '<div class="column container">';
     echo '<div class="card">';
-    echo '<h1 class="cardH1" ' . $brand ." ".$modello."</h1>";
-    echo '<h1 class="cardH1" ></h1>';
+    echo '<h1 class="information"> ' . $brand ." ".$modello."</h1>";
     echo '<img src="car/' . $modello . '.jpg" alt="' . $nameCar . '" style="width:100%">';
     echo '<p class="price" >' . $prezzo . " €</p>";
     echo '<p class="information">condizione:' . $condizione . "</p>";
