@@ -1,7 +1,10 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
-
+:root {
+    --custom-red: rgb(138, 3, 3);
+    --primary-color: rgb(229, 171, 13);
+}
 
 input[type=text], select, textarea {
     width: 100%;
@@ -49,7 +52,7 @@ input[type=submit]:hover {
 .title, .footer {
     text-align: center;
     background-color: black;
-    color: white;
+    color: var(--primary-color);
     padding: 1%;
     margin-top: 0;
 
@@ -70,4 +73,17 @@ label {
     font-style: italic;
     text-align: center;
     padding-top: 0.8%;
+}
+.information{
+    color: var(--primary-color);
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0);
+
+}.price{
+    color: white;
+    text-align: center;
+    font-size: 150%;
+    font-family: Magneto;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0);
+
 }
