@@ -17,7 +17,7 @@
 <h3 class="title">Vendi la tua auto!</h3>
 
 <div class="container">
-    <form method="post" action="php/sellcar.php" onsubmit="return validate(this)">
+    <form method="post" action="php/updatecar.php" onsubmit="return validate(this)">
         <label for="id">id</label>
         <textarea placeholder="Inserisci il id dell'auto " maxlength="8" id="id"
                   name="id" rows="1"
@@ -64,7 +64,7 @@
 </div>
 <script>
     function validate(form) {
-        return alert('hai venduto la macchina con successo!');
+        return alert('hai modificato la macchina con successo!');
 
     }
 </script>
