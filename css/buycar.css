@@ -47,19 +47,23 @@ input[type=submit]:hover {
     margin: auto auto 1%;
     width: 50%;
     padding: 6% 8% 6%;
+    min-height: 100%;
 }
 
 .title, .footer {
     text-align: center;
     background-color: black;
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
     padding: 1%;
     margin-top: 0;
+    text-shadow: 0 1px 0 rgba(255, 210, 0, 0);
+
 
 }
 
 label {
     font-family: "Lucida Console", Courier, monospace;
+    color: var(--primary-color);
 }
 
 .input {
@@ -97,6 +101,11 @@ label {
     width: 30%;
     padding: 0 10px;
 }
+.columnBought {
+    width: 50%;
+    padding: 0 10px;
+    margin: auto;
+}
 
 /* Remove extra left and right margins, due to padding in columns */
 .row {margin: 5% 5% 5% 5%;}
@@ -121,7 +130,7 @@ label {
 
 }
 .link-footer{
-    color: var(--primary-color) ;
+    color: var(--primary-color) !important;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */

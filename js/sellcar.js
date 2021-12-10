@@ -1,8 +1,8 @@
 $(document).ready(function () {
     let concessionaria = {
         'Audi': ['qualsiasi', 'A1', 'A3', 'A8', 'Q8', 'etron'],
-        'BMW': ['qualsiasi', 'Serie 7 Berlina', 'Serie 8 Coupé', 'X5', 'X6', 'M3 Berlina', 'M4 Coupé', 'M8 Coupé', 'i4', 'iX', 'iX3'],
-        'Lamborghini': ['qualsiasi', 'Aventador', 'Urus', 'Huracàn'],
+        'BMW': ['qualsiasi', 'Serie 7 Berlina', 'Serie 8 Coupe', 'X5', 'X6', 'M3 Berlina', 'M4 Coupe', 'M8 Coupe', 'i4', 'iX', 'iX3'],
+        'Lamborghini': ['qualsiasi', 'Aventador', 'Urus', 'Huracan'],
         'Ferrari': ['qualsiasi', 'F8 SPIDER', '812 SUPERFAST', 'ROMA', 'F12 BERLINETTA', 'SF90 SPIDER', 'PORTOFINO M'],
         'Porsche': ['qualsiasi', '718', 'Panamera', '911', 'Taycan', 'Macan', 'Cayenne'],
         'Maserati': ['qualsiasi', 'Quattroporte', 'Levante', 'MC20']

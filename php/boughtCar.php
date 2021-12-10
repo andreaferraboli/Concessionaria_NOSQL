@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-    <link rel="stylesheet" href="../css/boughtcar.css">
+    <link rel="stylesheet" href="../css/buycar.css">
 </head>
 <body>
 
@@ -35,7 +35,7 @@ if (isset($_POST['submit2'])) {
         if (mysqli_query($conn, $sql)) {
             echo '<div class="containerCard">';
             $nameCar = $brand . "-" . $modello;
-            echo '<div class="column">';
+            echo '<div class="columnBought">';
             echo '<div class="card">';
             echo '<h1 class="cardH1">' . $nameCar . "</h1>";
             echo '<img src="car/' . $modello . '.jpg" alt="' . $nameCar . '" style="width:100%">';
@@ -56,12 +56,14 @@ if (isset($_POST['submit2'])) {
     echo "you don't have submited form 2";
 }
 ?>
-
-<footer class="footer">
-    <a href="../index.html" TARGET="_self" class="link-footer">home</a>
-    <a href="../sellcar.html" TARGET="_self" class="link-footer">Vendi Auto</a>
-    <a href="../buycar.html" TARGET="_self" class="link-footer">Compra Auto</a>
-    <a href="../updatecar.html" TARGET="_self" class="link-footer">Aggiorna Auto</a>
-</footer>
+<div>
+    <footer class="footer">
+        <a href="../index.html" TARGET="_self" class="link-footer">home</a>
+        <a href="../sellcar.html" TARGET="_self" class="link-footer">Vendi Auto</a>
+        <a href="../buycar.html" TARGET="_self" class="link-footer">Compra Auto</a>
+        <a href="../updatecar.html" TARGET="_self" class="link-footer">Aggiorna Auto</a>
+    </footer>
+</div>
 </body>
+
 </html>
