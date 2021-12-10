@@ -228,6 +228,12 @@ a:focus {
     margin-right: auto;
     margin-bottom: 5%;
 }
+.rowContact{
+    width: 80%;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 .tm-down-arrow-link {
     display: block;
     margin-top: 18%;
@@ -695,11 +701,9 @@ figure.effect-honey:hover h2 i {
 }
 
 .finalcolumn {
-
-    float: left;
-    width: 30%;
+    width: 50%;
     padding: 0 5px;
-    margin: 0px 0px 0px 0px;
+    margin-top: 10%;
     /*padding: 0 8px;*/
     background-color: rgba(0, 0, 0, 0.7);
 }
@@ -849,7 +853,7 @@ p {
 
     .navbar a {
         float: left;
-        font-size: 16px;
+        font-size: 30px;
         color: #ffffff;
         text-align: center;
         padding: 14px 16px;
@@ -926,4 +930,14 @@ p {
         margin-left: 0;
         margin-top: 20px;
     }
+}
+.link-footer{
+    color: var(--primary-color) !important;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.0);
+    text-align: center;
+    padding: 0.5%;
+}
+.footer{
+    text-align: center;
+    padding: 2%;
 }
