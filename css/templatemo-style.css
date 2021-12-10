@@ -1,7 +1,69 @@
+/*
+
+The Town
+
+https://templatemo.com/tm-525-the-town
+
+*/
+#navbar{
+    height: 8vh;
+    min-height: 15px;
+    position: relative;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* li a:hover, .dropdown:hover .dropbtn {
+    background-color: rgba(255, 0, 0, 0);
+} */
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
 :root {
-    --custom-red: rgb(138, 3, 3);
-    --primary-color: rgb(229, 171, 13);
+    --custom-red: #ffffff;
 }
 
 html {
@@ -9,8 +71,8 @@ html {
 }
 
 body {
-    background-color: black;
-    color: black;
+    background-color: rgb(2, 2, 2);
+    color: rgb(0, 0, 0);
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -43,6 +105,8 @@ a:focus {
 
 .tm-text-primary {
     color: var(--custom-red);
+    font-family: "Times New Roman";
+    position: center;
 }
 
 .tm-intro-text {
@@ -54,101 +118,27 @@ a:focus {
 }
 
 .tm-btn-primary {
-    color: black;
-    background-color: var(--custom-red);
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.0);
     padding: 14px 35px;
     border-radius: 30px;
-    position: relative;
-    align-items: center;
-    margin-right: 10%;
 }
 
 .tm-btn-primary:hover,
 .tm-btn-primary:focus {
-    color: var(--custom-red);
-    background-color: white;
+    color: #b7aaaa;
+    background-color: rgba(0, 0, 0.0, 0);
 }
-
-
-/* Navbar */
-
-.section-navbar {
-    background-color: black;
-}
-
-.tm-navbar {
-    width: 100%;
-    z-index: 1000;
-    background-color: transparent;
-    transition: all 0.3s ease;
-}
-
-.tm-navbar.scroll {
-    background-color: rgb(255, 255, 255);
-    border-bottom: 1px solid #e9ecef;
-}
-
-.navbar-brand {
-    color: rgb(255, 255, 255);
-    font-size: 1.4rem;
-    font-weight: bold;
-}
-
-.navbar-brand:hover,
-.tm-navbar.scroll .navbar-brand:hover {
-    color: white;
-}
-
-.tm-navbar.scroll .navbar-brand {
-    color: #8f8f8f;
-}
-
-.nav-item {
-    list-style: none;
-}
-
-.tm-nav-link {
-    color: white;
-}
-
-.tm-navbar.scroll .tm-nav-link {
-    color: #8f8f8f;
-}
-
-.tm-navbar.scroll .tm-nav-link:hover,
-.tm-navbar.scroll .tm-nav-link.current,
-.tm-nav-link:hover {
-    color: var(--custom-red);
-}
-
-.navbar-toggler {
-    border: 1px solid rgb(0, 0, 0);
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.navbar-toggler-icon {
-    color: rgb(0, 0, 0);
-    padding-top: 6px;
-}
-
-.tm-navbar.scroll .navbar-toggler {
-    border: 1px solid #8f8f8f;
-}
-
-.tm-navbar.scroll .navbar-toggler-icon {
-    color: #8f8f8f;
-}
-
 
 /* Hero */
-
 #hero {
-    background-image: url(../img/Audi-Q4-e-tron.jpg);
+    background-image: url(../img/Porsche-911-GTS-2021-33.jpg);
     background-repeat: no-repeat;
     height: 100vh;
     min-height: 300px;
     position: relative;
+    font-family: Magneto;
+    color: #dedede;
 }
 
 @media (min-height: 830px) {
@@ -184,20 +174,30 @@ a:focus {
 }
 
 .tm-hero-subtitle {
-    color: var(--custom-red);
+    text-align: center;
+    color: black;
+    font-family: fantasy;
+}
+
+.tm-hero-introduction {
+    text-align: center;
+    color: white;
     font-family: fantasy;
 }
 
 .tm-hero-text-container-inner {
+    text-align: center;
     margin-top: -90px;
 }
 
 .tm-hero-title {
+    text-align: center;
     font-size: 3.5rem;
     text-shadow: 2px 2px 2px #333;
 }
 
 .tm-intro-next {
+    text-align: center;
     position: absolute;
     bottom: 100px;
     left: 0;
@@ -219,23 +219,144 @@ a:focus {
     margin-top: 18%;
 }
 
-.tm-down-arrow {
-    color: #880200;
-    cursor: pointer;
-    background: rgb(0, 0, 0);
-    border-radius: 50%;
-    padding: 10px 22px 8px;
-    transition: all 0.3s ease;
+.introw > .intcolumn {
+    padding: 0 8px;
 }
 
-.tm-down-arrow:hover,
-.tm-down-arrow:focus {
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.intcolumn {
+    float: left;
+    width: 25%;
+}
+
+/* le nostre auto */
+.introw:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
+
+
+/* The Close Button */
+.close {
     color: white;
-    background: var(--custom-red);
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
 }
 
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
 
-/* Introduction */
+.mySlides {
+    display: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgb(229, 171, 13);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+img {
+    margin-bottom: -4px;
+}
+
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+img.hover-shadow {
+    transition: 0.3s;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 .tm-section-title {
     font-size: 2.6rem;
@@ -245,6 +366,7 @@ a:focus {
 .tm-intro-text {
     font-size: 1.2rem;
     line-height: 1.4;
+    margin-top: auto;
 }
 
 .tm-icon {
@@ -253,6 +375,21 @@ a:focus {
     color: var(--custom-red);
 }
 
+.carousel-indicators {
+    position: center;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    z-index: 15;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none
+}
 
 /* Work */
 
@@ -406,7 +543,6 @@ figure.effect-honey figcaption::before {
     height: 10px;
     background: var(--custom-red);
     content: "";
-    text-align: center;
     -webkit-transform: translate3d(0, 10px, 0);
     transform: translate3d(0, 10px, 0);
 }
@@ -424,8 +560,6 @@ figure.effect-honey h2 {
 
 figure.effect-honey h2 i {
     font-style: normal;
-    font-size: 60%;
-    text-align: left;
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
@@ -520,8 +654,66 @@ figure.effect-honey:hover h2 i {
 
 .tm-btn-submit {
     margin-left: 20px;
+    color: black;
 }
 
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.finalcolumn {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width: 650px) {
+    .finalcolumn {
+        width: 100%;
+        display: block;
+        align-content: center;
+    }
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(52, 52, 52, 0);
+}
+
+.finalcontainer {
+    padding: 0 16px;
+    text-align: center;
+    font-family: "Sans-serif";
+}
+
+.finalcontainer::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.finaltitle {
+    color: #d8a311;
+    font-family:"Arial Nova Cond";
+
+}
+
+.finalbutton {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.finalbutton:hover {
+    background-color: #555;
+}
 .tm-footer {
     position: absolute;
     bottom: 35px;
@@ -546,48 +738,125 @@ p {
 
 @media (min-width: 768px) {
     .tm-intro-text-container {
-        padding-left: 65px;
+        padding-left: 80px;
     }
 
-    .navbar-expand-md .navbar-nav .nav-link {
-        padding-right: 30px;
-        padding-left: 30px;
-    }
-}
+    @media (min-width: 1200px) {
+        .container {
+            max-width: 1275px;
+        }
 
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1275px;
-    }
+        .tm-container-gallery {
+            max-width: 1290px;
+        }
 
-    .tm-container-gallery {
-        max-width: 1290px;
-    }
-
-    .tm-container-contact {
-        max-width: 1063px;
-    }
-}
-
-@media (max-width: 991px) {
-    .tm-intro-text-container {
-        padding-left: 15px;
-        padding-top: 30px;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
+        .tm-container-contact {
+            max-width: 1063px;
+        }
     }
 
-    .tm-intro-img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+    @media (max-width: 991px) {
+        .tm-intro-text-container {
+            padding-left: 15px;
+            padding-top: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tm-intro-img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tm-btn-submit {
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+    * {
+        box-sizing: border-box;
     }
 
-    .tm-btn-submit {
+    body {
+        margin-top: 0;
+        margin-right: 0;
         margin-left: 0;
-        margin-top: 20px;
+        margin-bottom: 0;
     }
+
+    .navbar {
+        overflow: hidden;
+        background-color: #333;
+        font-family: Helvetica;
+    }
+
+    .navbar a {
+        float: left;
+        font-size: 16px;
+        color: #ffffff;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: rgba(129, 122, 106, 0);
+    }
+
+    .dropdown-content .header {
+        background: red;
+        padding: 16px;
+        color: white;
+    }
+
+
+    .tm-nav-link {
+        color: white;
+    }
+
+    .tm-navbar.scroll .tm-nav-link:hover, .tm-navbar.scroll .tm-nav-link.current, .tm-nav-link:hover {
+        color: #919191;
+    }
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    margin-left: 2%;
+    float: left;
+    width: 30%;
+    padding: 10px;
+    background-color: #dadada;
+    height: 250px;
+}
+
+.megacolumn {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    background-color: #ccc;
+    height: 250px;
+}
+
+.megacolumn a {
+    float: none;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.megacolumn a:hover {
+    background-color: #ddd;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 @media (max-width: 767px) {
@@ -596,19 +865,8 @@ p {
         margin-top: 0;
     }
 
-    .navbar-nav {
-        max-width: 200px;
-        text-align: right;
-    }
-
-    .navbar-collapse {
-        background-color: rgb(255, 255, 255);
-        padding: 10px;
-        border-radius: 3px;
-    }
-
-    .navbar-collapse .nav-link {
-        color: #8f8f8f;
+    img {
+        background: transparent;
     }
 }
 
