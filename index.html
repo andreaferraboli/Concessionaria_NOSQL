@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:margin-top="http://www.w3.org/1999/xhtml">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
     <title>Concessionaria Bresciana</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="fontawesome-5.5/css/all.min.css"/>
-    <link rel="stylesheet" href="slick/slick.css">
-    <link rel="stylesheet" href="slick/slick-theme.css">
-    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/templatemo-style.css"/>
+    <link href="fontawesome-5.5/css/all.min.css" rel="stylesheet"/>
+    <link href="slick/slick.css" rel="stylesheet">
+    <link href="slick/slick-theme.css" rel="stylesheet">
+    <link href="magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="../../Downloads/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/templatemo-style.css" rel="stylesheet"/>
 </head>
 <body>
 <section id="navbar">
@@ -22,30 +22,71 @@
         <li><a href="#introduction">Home</a></li>
         <li><a href="#contact">Contatti</a></li>
         <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Modelli</a>
+            <a class="dropbtn" href="javascript:void(0)">Modelli</a>
             <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+                <div>
+                    <a href="buycar.html"><img class="logo" src="img/Logo_della_BMW.svg.png"></a>
+                </div>
+                <div>
+
+                    <a href="buycar.html"><img class="logo" src="img/Audi-Logo.png"></a>
+                </div>
+                <div>
+                    <a href="buycar.html"><img class="logo" src="img/LogoPorsche.png"></a>
+
+                </div>
+                <div>
+                    <a href="buycar.html"><img class="logo" src="img/Logo_della_Lamborghini.svg.png"></a>
+
+                </div>
+                <div>
+                    <a href="buycar.html"><img class="logo" src="img/LogoFerrari.png"></a>
+
+                </div>
+                <div>
+
+                    <a href="buycar.html"><img class="logo" src="img/LogoMaserati.png"></a>
+                </div>
+
             </div>
         </li>
+        <li><a class="magneto" href="#final">Concessionaria Bresciana</a></li>
     </ul>
 </section>
-<section id="hero" class="text-white tm-font-big tm-parallax">
-    <!-- Navigation -->
+    <div class="carousel slide" data-ride="carousel" id="Carousel">
+        <!-- Indicators -->
+        <ol class="introcarousel-indicators">
+            <li class="active" data-target="#Carousel"></li>
+            <li data-target="#Carousel"></li>
+            <li data-target="#Carousel"></li>
+        </ol>
 
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="img/carousel1.jpg">
+            </div>
 
-    <div class="text-center tm-hero-text-container">
-        <div class="tm-hero-text-container-inner">
-            <h2 class="tm-hero-title">Concessionaria Bresciana</h2>
-            <p class="tm-hero-subtitle">
-                DRIVE TO THE FUTURE
-            </p>
+            <div class="item">
+                <img src="img/Carousel2.jpg">
+            </div>
+
+            <div class="item">
+                <img src="img/carousel3.jpg">
+            </div>
+            <div class="item">
+                <img src="img/carousel4.jpg">
+            </div>
+            <div class="item">
+                <img src="img/carousel5.jpg">
+            </div>
+            <div class="item">
+                <img src="img/carousel6.jpg">
+            </div>
         </div>
-    </div>
-</section>
+</div>
 
-<div id="introduction" class="row tm-section-pad-top">
+<div class="row tm-section-pad-top" id="introduction">
     <div class="col-lg-4">
         <i class="fas fa-4x fa-car text-center tm-icon"></i>
         <h4 class="text-center tm-text-primary mb-4">Qualità</h4>
@@ -71,25 +112,28 @@
         </p>
     </div>
 </div>
+<div class="row">
+    <a class="tm-intro-text tm-btn-primary" href="buycar.html">ACQUISTA ORA</a>
+    <a class="tm-intro-text tm-btn-primary" href="sellcar.html">VENDI ORA</a>
+    <a class="tm-intro-text tm-btn-primary" href="sellcar.html">CAMBIA ORA</a>
 </div>
-</section>
-<section id="work" class="tm-section-pad-top">
+<section class="tm-section-pad-top" id="work">
     <div class="container tm-container-gallery">
         <div class="row">
             <div class="text-center col-12">
-                <h2 style="text-align: center" class="tm-text-primary tm-section-title mb-4">La nostra azienda</h2>
-                <p style="text-align: center" class="mb-4 tm-intro-text">
+                <h2 id="final" class="tm-text-primary tm-section-title mb-4" style="text-align: center">La nostra azienda</h2>
+                <p class="mb-4 tm-intro-text" style="text-align: center">
                     Fondata nel 1980, la nostra concessionaria si è specializzata nella vendita di auto sportive nuove e
                     usate, create appositamente per chi vuole mangiare l'asfalto con la potenza del proprio motore.
                 </p>
             </div>
         </div>
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel slide" data-ride="carousel" id="myCarousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+                <li data-slide-to="1" data-target="#myCarousel"></li>
+                <li data-slide-to="2" data-target="#myCarousel"></li>
             </ol>
 
             <!-- Wrapper for slides -->
@@ -108,11 +152,11 @@
             </div>
 
             <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <a class="left carousel-control" data-slide="prev" href="#myCarousel">
                 <span class="glyphicon glyphicon-chevron-left"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <a class="right carousel-control" data-slide="next" href="#myCarousel">
                 <span class="glyphicon glyphicon-chevron-right"></span>
                 <span class="sr-only">Next</span>
             </a>
@@ -120,97 +164,99 @@
 
 
         <!-- Contact -->
-        <section id="contact" class="tm-section-pad-top tm-parallax-2">
+        <section class="tm-section-pad-top tm-parallax-2" id="contact">
             <div class="container tm-container-contact">
-                <div class="row">
+                <div>
                     <div class="col-12">
                         <h2 class="mb-4 tm-section-title">Contattaci</h2>
                         <div class="mb-5 tm-underline">
                             <div class="tm-underline-inner"></div>
                         </div>
-                    <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
-                        <a href="https://www.google.com/maps" class="tm-contact-item-link"><br><br>
-                            <i class="fas fa-3x fa-map-marker-alt mr-4"></i>
-                            <span class="mb-0"><br> Vieni a trovarci</span>
-                        </a>
-                    </div>
-                    <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
-                        <form action="" method="get">
-                            <input name="email" type="email" placeholder="Subscribe your email" class="tm-input"
-                                   required/>
-                            <button type="submit" class="btn tm-btn-submit">Iscriviti</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <h2>Responsive "Meet The Team" Section</h2>
-            <p>Resize the browser window to see the effect.</p>
-            <br>
-
-            <div class="row">
-                <div class="finalcolumn">
-                    <div class="card">
-                        <center><img src="img/imgMatteo.jpg" style="width:30%"></center>
-                        <div class="finalcontainer">
-                            <h2>Matteo Boldrini</h2>
-                            <p class="finaltitle">Direzione</p>
-                            <p>Per una visita dello showroom o informazioni, contattare:</p>
-                            <a href="mailto:matteo.boldrini03@gmail.com">matteo.boldrini03@gmail.com</a>
-                            <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
-                                <a href="tel:+393917501461" class="tm-contact-item-link">
-                                    <span class="mb-0"><button class="finalbutton">Contact</button></span>
-                                </a>
-                            </div>
+                        <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
+                            <a class="tm-contact-item-link" href="https://www.google.com/maps">
+                                <i class="fas fa-3x fa-map-marker-alt mr-4 tm-icon"></i>
+                                <span class="mb-0"><br> Vieni a trovarci</span>
+                            </a>
+                        </div>
+                        <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
+                            <form action="" method="get">
+                                <input class="tm-input" name="email" placeholder="Subscribe your email" required
+                                       type="email"/>
+                                <button class="btn tm-btn-submit" type="submit">Iscriviti</button>
+                            </form>
                         </div>
                     </div>
                 </div>
 
-                <div class="finalcolumn">
-                    <div class="card">
-                        <center><img src="img/imgLuca.jpg" style="width:30%"></center>
-                        <div class="finalcontainer">
-                            <h2>Luca Lombardo</h2>
-                            <p class="finaltitle">Assitenza clienti</p>
-                            <p>Per assistenza relativa i nostri mezzi recarsi in sede o contattare:</p>
-                            <a href="mailto:luca.lombardo@gmail.com">luca.lombardo@gmail.com</a>
-                            <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
-                                <a href="tel:+393661908429" class="tm-contact-item-link">
-                                    <span class="mb-0"><button class="finalbutton">Contact</button></span>
-                                </a>
+                <div class="row">
+                    <div class="finalcolumn">
+                        <div class="card">
+                            <div style="text-align: center;"><img src="img/imgMatteo.png" style="width: 30%"></div>
+                            <div class="finalcontainer">
+                                <h2>Matteo Boldrini</h2>
+                                <p class="finaltitle">Direzione</p>
+                                <p>Per una visita dello showroom o informazioni,<br>contattare:</p>
+                                <a href="mailto:matteo.boldrini03@gmail.com">matteo.boldrini03@gmail.com</a>
+                                <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
+                                    <a class="tm-contact-item-link" href="tel:+393917501461">
+                                        <span class="mb-0"><button class="finalbutton">Contact</button></span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="finalcolumn">
-                    <div class="card">
-                        <center><img src="img/imgMatteo.jpg" style="width:30%"></center>
-                        <div class="finalcontainer">
-                            <h2>Andrea Ferraboli</h2>
-                            <p class="finaltitle">Commerciale</p>
-                            <p>Per le nostre promozione e offerte, <br>contattare:</p>
-                            <a href="mailto:andrea.ferraboli@gmail.com">andrea.ferraboli@gmail.com</a>
-                            <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
-                                <a href="tel:+393339431378" class="tm-contact-item-link">
-                                    <span class="mb-0"><button class="finalbutton">Contact</button></span>
-                                </a>
+                    <div class="finalcolumn">
+                        <div class="card">
+                            <div style="text-align: center;"><img src="img/imgLuca.png" style="width:30%"></div>
+                            <div class="finalcontainer">
+                                <h2>Luca Lombardo</h2>
+                                <p class="finaltitle">Assitenza clienti</p>
+                                <p>Per assistenza relativa i nostri mezzi recarsi in sede contattare:</p>
+                                <a href="mailto:luca.lombardo@gmail.com">luca.lombardo@gmail.com</a>
+                                <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
+                                    <a class="tm-contact-item-link" href="tel:+393661908429">
+                                        <span class="mb-0"><button class="finalbutton">Contact</button></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="finalcolumn">
+                        <div class="card">
+                            <div style="text-align: center;"><img src="img/imgAndrea.png" style="width:30%"></div>
+                            <div class="finalcontainer">
+                                <h2>Andrea Ferraboli</h2>
+                                <p class="finaltitle">Commerciale</p>
+                                <p>Per le nostre promozione e offerte, <br>contattare:</p>
+                                <a href="mailto:andrea.ferraboli@gmail.com">andrea.ferraboli@gmail.com</a>
+                                <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
+                                    <a class="tm-contact-item-link" href="tel:+393339431378">
+                                        <span class="mb-0"><button class="finalbutton">Contact</button></span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <footer class="text-center small tm-footer">
-                <p class="mb-0"><br>
-                    Copyright &copy; 2019 Concessionaria
-                </p>
-            </footer>
-            </div>
+
         </section>
+        <footer class="text-center small tm-footer">
+        <b><p class="mb-0"><br>
+            Progetto TPI 2021/2022 @
+        </p></b>
+            <a href="index.html" TARGET="_self" class="link-footer">home</a>
+            <a href="sellcar.html" TARGET="_self" class="link-footer">Vendi Auto</a>
+            <a href="buycar.html" TARGET="_self" class="link-footer">Compra Auto</a>
+            <a href="updatecar.html" TARGET="_self" class="link-footer">Aggiorna Auto</a>
+    </footer>
         <script src="js/jquery-1.9.1.min.js"></script>
         <script src="slick/slick.min.js"></script>
         <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
         <script src="js/jquery.singlePageNav.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="../../Downloads/js/bootstrap.min.js"></script>
         <script>
             function openModal() {
                 document.getElementById("myModal").style.display = "block";
@@ -402,7 +448,7 @@
                 });
             });
         </script>
-</div>
+    </div>
 </section>
 </body>
 

@@ -1,10 +1,7 @@
-/*
 
-The Town
-
-https://templatemo.com/tm-525-the-town
-
-*/
+:root{
+    --primary-color: rgb(229, 171, 13);
+}
 #navbar{
     height: 8vh;
     min-height: 15px;
@@ -30,9 +27,9 @@ li a, .dropbtn {
     text-decoration: none;
 }
 
-/* li a:hover, .dropdown:hover .dropbtn {
-    background-color: rgba(255, 0, 0, 0);
-} */
+li a:hover, .dropdown:hover .dropbtn {
+    color: var(--primary-color);
+}
 
 li.dropdown {
     display: inline-block;
@@ -41,17 +38,19 @@ li.dropdown {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: rgba(0, 0, 0, 0.45);
     min-width: 160px;
     z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 10px 10px;
     text-decoration: none;
     display: block;
-    text-align: left;
+    text-align: center;
 }
 
 .dropdown-content a:hover {
@@ -93,6 +92,7 @@ a:focus {
 
 .btn {
     padding: 8px 32px;
+    color: var(--primary-color);
 }
 
 .btn:hover {
@@ -104,7 +104,7 @@ a:focus {
 }
 
 .tm-text-primary {
-    color: var(--custom-red);
+    color: var(--primary-color);
     font-family: "Times New Roman";
     position: center;
 }
@@ -118,10 +118,14 @@ a:focus {
 }
 
 .tm-btn-primary {
-    color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.0);
+    color: var(--primary-color);
+    background-color: rgb(0, 0, 0);
     padding: 14px 35px;
     border-radius: 30px;
+    border-color: var(--primary-color);
+    border-style:solid;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .tm-btn-primary:hover,
@@ -140,7 +144,11 @@ a:focus {
     font-family: Magneto;
     color: #dedede;
 }
-
+.logo{
+   width: 30%;
+    height: 30%;
+    text-align: center !important;
+}
 @media (min-height: 830px) {
     #hero {
         background-position: center -210px;
@@ -213,7 +221,13 @@ a:focus {
         bottom: 20px;
     }
 }
-
+.row{
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+}
 .tm-down-arrow-link {
     display: block;
     margin-top: 18%;
@@ -361,6 +375,7 @@ img.hover-shadow {
 .tm-section-title {
     font-size: 2.6rem;
     font-weight: normal;
+    color: var(--primary-color);
 }
 
 .tm-intro-text {
@@ -371,8 +386,9 @@ img.hover-shadow {
 
 .tm-icon {
     display: block;
-    margin-bottom: 55px;
-    color: var(--custom-red);
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    margin-top: 7%;
 }
 
 .carousel-indicators {
@@ -389,6 +405,20 @@ img.hover-shadow {
     margin-right: 15%;
     margin-left: 15%;
     list-style: none
+}
+.introcarousel-indicators {
+    position: center;
+    right: 0;
+    left: 0;
+    z-index: 15;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
 }
 
 /* Work */
@@ -608,7 +638,8 @@ figure.effect-honey:hover h2 i {
 }
 
 .tm-contact-item {
-    margin-bottom: 75px;
+    margin-bottom: 7%;
+    margin-top: -2%;
 }
 
 .tm-contact-item-link {
@@ -618,26 +649,25 @@ figure.effect-honey:hover h2 i {
 
 .tm-contact-item-link i,
 .tm-contact-item-link span {
-    color: white;
+    color: var(--primary-color);
     transition: all 0.3s ease;
+    margin-top: 7%;
 }
 
 .tm-contact-item-link:hover i,
 .tm-contact-item-link:hover span {
-    color: var(--custom-red);
 }
-
 .tm-input {
     padding: 8px 25px;
     border-radius: 3px;
-    border: 1px solid white;
-    background: transparent;
-    color: white;
+    border-color: var(--primary-color);
+    background-color: rgba(98, 98, 98, 0.67);
+    margin-top: 9%;
 }
 
 ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: white;
+    color: var(--primary-color);
     opacity: 1;
     /* Firefox */
 }
@@ -654,7 +684,10 @@ figure.effect-honey:hover h2 i {
 
 .tm-btn-submit {
     margin-left: 20px;
-    color: black;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    background-color: rgba(98, 98, 98, 0.67);
+    margin-top: -1%;
 }
 
 *, *:before, *:after {
@@ -662,10 +695,12 @@ figure.effect-honey:hover h2 i {
 }
 
 .finalcolumn {
+
     float: left;
-    width: 33.3%;
-    margin-bottom: 16px;
-    padding: 0 8px;
+    width: 30%;
+    padding: 0 5px;
+    margin: 0px 0px 0px 0px;
+    /*padding: 0 8px;*/
     background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -676,17 +711,30 @@ figure.effect-honey:hover h2 i {
         align-content: center;
     }
 }
-
+.row {
+    margin-top: 5%;
+    text-align: center;
+    position: center;
+    background-position: center;
+    width: 100%;
+}
 .card {
     box-shadow: 0 4px 8px 0 rgba(52, 52, 52, 0);
+    text-align: center;
 }
 
-.finalcontainer {
+.finalcontainer{
     padding: 0 16px;
     text-align: center;
     font-family: "Sans-serif";
 }
 
+.finalcontainer a{
+    padding: 0 16px;
+    text-align: center;
+    font-family: "Sans-serif";
+    color: var(--primary-color);
+}
 .finalcontainer::after, .row::after {
     content: "";
     clear: both;
@@ -700,19 +748,20 @@ figure.effect-honey:hover h2 i {
 }
 
 .finalbutton {
-    border: none;
+    border-color: var(--primary-color);
     outline: 0;
-    display: inline-block;
     padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
+    color: var(--primary-color);
+    background-color: rgba(0, 0, 0, 0);
     cursor: pointer;
     width: 100%;
+    border-radius: 4px;
+    margin:auto;
+    align-items: center;
 }
 
 .finalbutton:hover {
-    background-color: #555;
+    background-color: rgba(85, 85, 85, 0.14);
 }
 .tm-footer {
     position: absolute;
@@ -720,15 +769,16 @@ figure.effect-honey:hover h2 i {
     left: 0;
     right: 0;
     padding: 0 15px;
+    color: black;
 }
 
 .tm-footer-link {
-    color: white;
+    color: var(--primary-color);
 }
 
 .tm-footer-link:hover,
 .tm-footer-link:focus {
-    color: var(--custom-red);
+    color: var(--primary-color);
     text-decoration: none;
 }
 
@@ -772,7 +822,7 @@ p {
 
         .tm-btn-submit {
             margin-left: 0;
-            margin-top: 20px;
+            margin-top: 7%;
         }
     }
     * {
@@ -785,7 +835,12 @@ p {
         margin-left: 0;
         margin-bottom: 0;
     }
-
+    .magneto{
+        font-family: Magneto;
+        text-align: center;
+        display: inline-block;
+        color: var(--primary-color);
+    }
     .navbar {
         overflow: hidden;
         background-color: #333;
@@ -829,27 +884,6 @@ p {
     padding: 10px;
     background-color: #dadada;
     height: 250px;
-}
-
-.megacolumn {
-    float: left;
-    width: 33.33%;
-    padding: 10px;
-    background-color: #ccc;
-    height: 250px;
-}
-
-.megacolumn a {
-    float: none;
-    color: black;
-    padding: 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.megacolumn a:hover {
-    background-color: #ddd;
 }
 
 /* Clear floats after the columns */
