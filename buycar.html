@@ -14,7 +14,7 @@
 <h3 class="title">Compra la tua auto!</h3>
 
 <div class="container">
-    <form name="choseform" method="post" action="php/buycar.php" >
+    <form name="choseform" method="post" action="php/buycar.php">
         <label for="brand">Marca</label>
         <select id="brand" name="brand">
             <option value="qualsiasi">qualsiasi</option>
@@ -36,23 +36,18 @@
         <label for="cavalli">cavalli</label>
         <select id="cavalli" name="cavalli">
             <option value="qualsiasi">qualsiasi</option>
-            <option value="200"> 200</option>
-            <option value="300"> 300</option>
-            <option value="400"> 400</option>
-            <option value="500"> 500</option>
-            <option value="600"> 600</option>
         </select>
 
         <div data-role="main" class="ui-content">
-                <div data-role="rangeslider">
-                    <label for="price-min">Price:</label>
-                    <input type="range" name="price-min" id="price-min" value="10000" min="0" max="50000" class="input">
-                    <input type="range" name="price-max" id="price-max" value="150000" min="0" max="500000"
-                           class="input">
-                </div>
+            <div data-role="rangeslider">
+                <label for="price-min">Price:</label>
+                <input type="range" name="price-min" id="price-min" value="10000" min="0" max="50000" class="input">
+                <input type="range" name="price-max" id="price-max" value="150000" min="0" max="500000"
+                       class="input">
+            </div>
         </div>
-        <input type="submit" value="Submit" name="submit1"/>
-        <input type="reset" value="Reset"/>
+        <button class="cardButton" type="submit" value="Submit" name="submit1">submit</button>
+        <button class="reset" type="reset" value="Reset">reset</button>
     </form>
 </div>
 <footer class="footer">

@@ -9,12 +9,6 @@
 
 <h3 class="title">Compra la tua auto!</h3>
 <?php
-$default = [
-    'id_macchina' => '',
-    // Qui aggiungerai tutti gli altri valori di default
-];
-
-$_POST = array_replace( $default, $_POST );
 $brand = $_POST['brand'];
 $modello = $_POST['modello'];
 $condizione = $_POST['condizione'];
@@ -27,14 +21,15 @@ if ($conn->connect_error) {
     echo "$conn->connect_error";
     die("Connection Failed : " . $conn->connect_error);
 } else {
+    //creo la query
     $sql = "SELECT * FROM macchine where " . createQuery($brand, $modello, $condizione, $kilometraggio, $cavalli, $prezzo_min, $prezzo_max);
+    //eseguo la query
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-// output data of each row
         $numberElements = 0;
+        //creo la rappresentazione delle macchine in magazzino
         echo '<div class="containerCard">';
-
         while ($row = $result->fetch_assoc()) {
             $nameCar = $row["brand"] . "-" . $row["modello"];
             if ($numberElements % 3 == 0)
@@ -42,17 +37,17 @@ if ($conn->connect_error) {
             echo '<div class="column">';
             echo '<div class="card">';
             echo '<form name="buyform" method="post" action="boughtCar.php">';
-            echo '<select id="id_macchina" name="id_macchina" >';
-            echo '<option value="'.$row["id_macchina"].'" selected>'.$row["id_macchina"]."</option>";
-            echo'</select>';
+            echo '<select id="id_macchina" name="id_macchina" class="idButton" >';
+            echo '<option value="' . $row["id_macchina"] . '" selected>' . "id:" . $row["id_macchina"] . "</option>";
+            echo '</select>';
             echo '<h1 class="cardH1" >' . $row["brand"] . "</h1>";
             echo '<h1 class="cardH1">' . $row["modello"] . "</h1>";
-            echo '<img src="car/' . $row["modello"] . '.jpg" alt="' . $nameCar . '" style="width:100%">';
+            echo '<img src="car/' . $row["modello"] . '.jpg" alt="' . $nameCar . '" style="width:100%;height:300px">';
             echo '<p class="price" >' . $row["prezzo"] . " €</p>";
             echo '<p class="information" >condizione:' . $row["condizione"] . "</p>";
             echo '<p class="information" >cavalli:' . $row["cavalli"] . "</p>";
             echo '<p class="information" >kilometraggio:' . $row["kilometraggio"] . "</p>";
-            echo '<input type="submit" value="Compra Macchina" class="cardButton" name="submit2" >'.'</input>';
+            echo '<button type="submit" value="Compra Macchina" class="cardButton" name="submit2" >Compra!</button>';
 //            echo '<button class="cardButton" />Compra Macchina</button>';
             echo "</form>";
             echo "</div>";
@@ -66,12 +61,7 @@ if ($conn->connect_error) {
         echo "0 results";
     }
 }
-function buyCar($id)
-{
-    $sql = "DELETE FROM macchine WHERE macchine.id_macchina=" . $id;
-    //$result = $conn->query($sql);
-}
-
+//creo la query con la sintassi corretta dati i parametri in input
 function createQuery($brand, $modello, $condizione, $kilometraggio, $cavalli, $prezzo_min, $prezzo_max): string
 {
     $query = "";

@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    //modelli della concessionaria
     let concessionaria = {
         'Audi': ['qualsiasi', 'A1', 'A3', 'A8', 'Q8', 'etron'],
         'BMW': ['qualsiasi', 'Serie 7 Berlina', 'Serie 8 Coupe', 'X5', 'X6', 'M3 Berlina', 'M4 Coupe', 'M8 Coupe', 'i4', 'iX', 'iX3'],
@@ -7,13 +8,16 @@ $(document).ready(function () {
         'Porsche': ['qualsiasi', '718', 'Panamera', '911', 'Taycan', 'Macan', 'Cayenne'],
         'Maserati': ['qualsiasi', 'Quattroporte', 'Levante', 'MC20']
     }
+    //estrapolo i brand dalla concessionaria
     const keys = Object.keys(concessionaria);
+    //riempio il menù a cascata dei brand presenti
     for (i in keys) {
         option = document.createElement('option');
         option.value = keys[i];
         option.text = keys[i];
         document.getElementById('brand').appendChild(option);
     }
+    ////riempio il menù a cascata del modello quando si seleziona un brand
     $("#brand").change(function () {
         var selectedBrand = document.getElementById("brand").value;
         var e = document.getElementById("modello");

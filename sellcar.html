@@ -18,7 +18,7 @@
 <h3 class="title">Vendi la tua auto!</h3>
 
 <div class="container">
-    <form method="post" action="php/sellcar.php" onsubmit="return validate(this)">
+    <form method="post" action="php/sellcar.php">
         <label for="brand">Marca</label>
         <!--select placeholder="Inserisci la marca dell'auto" type="text" list="marca" name="marca" required/>-->
         <select id="brand" class='form-control' name="brand" required>
@@ -54,16 +54,10 @@
         <textarea placeholder="Inserisci il prezzo (in euro)" maxlength="8" id="prezzo" name="prezzo" rows="1"
                   cols="1" required></textarea>
 
-        <input type="submit" value="Submit"/>
-        <input type="reset" value="Reset"/>
+        <button class="cardButton" type="submit" value="Submit" name="submit1">submit</button>
+        <button class="reset" type="reset" value="Reset">reset</button>
     </form>
 </div>
-<script>
-    function validate(form) {
-        return alert('hai venduto la macchina con successo!');
-
-    }
-</script>
 <footer class="footer">
     <a href="index.html" TARGET="_self" class="link-footer">home</a>
     <a href="sellcar.html" TARGET="_self" class="link-footer">Vendi Auto</a>

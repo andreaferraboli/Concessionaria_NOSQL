@@ -8,10 +8,10 @@
     <orderEntry type="library" name="jquery-1.11.3" level="application" />
     <orderEntry type="library" name="jquery.mobile-1.4.5" level="application" />
     <orderEntry type="library" name="normalize" level="application" />
-    <orderEntry type="library" name="jquery" level="application" />
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="jquery.mobile-1.4.5" level="application" />
     <orderEntry type="library" name="jquery-1.11.3" level="application" />
     <orderEntry type="library" name="normalize" level="application" />
+    <orderEntry type="library" name="bootstrap" level="application" />
   </component>
 </module>

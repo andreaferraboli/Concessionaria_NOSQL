@@ -3,35 +3,11 @@
     --custom-red: rgb(138, 3, 3);
     --primary-color: rgb(229, 171, 13);
 }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
-
-input[type=submit] {
-    background-color: var(--primary-color) !important;
-    color: black;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: #000000;
-    color:var(--primary-color);
-}
 
 .ui-page {
     background-image: url("../img/ferrari01.jpg");
@@ -61,6 +37,10 @@ input[type=submit]:hover {
 
 }
 
+textarea {
+    text-align: center;
+}
+
 label {
     font-family: "Lucida Console", Courier, monospace;
     color: var(--primary-color);
@@ -70,10 +50,22 @@ label {
     min-width: 6%;
     margin-outside: 1%;
 }
+
 .containerCard {
-    background-color: rgba(0, 0, 0, 0.72);
-    margin:auto;
+    background-color: rgba(0, 0, 0, 0.72) !important;
+    margin: auto;
 }
+
+.idButton {
+    color: var(--primary-color) !important;
+    background-color: black !important;
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+    font-size: 100%;
+    opacity: 1 !important;
+}
+
 .price {
     color: var(--primary-color);
     font-size: 22px;
@@ -81,26 +73,41 @@ label {
 }
 
 .cardButton {
-    border: none;
-    outline: 0;
-    color:black;
+    color: black;
+    width: 40% !important;
     background-color: var(--primary-color) !important;
     text-align: center;
     cursor: pointer;
     font-size: 18px;
+    opacity: 1 !important;
+    margin: auto !important;
 }
-.information{
+
+.reset {
+    background-color: black !important;
+    color: var(--primary-color) !important;
+    width: 40% !important;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    opacity: 1 !important;
+    margin: auto !important;
+}
+
+.information {
     color: var(--primary-color);
     text-align: center;
     text-shadow: 0 1px 0 rgba(255, 210, 0, 0);
 
 }
+
 /* Float four columns side by side */
 .column {
     float: left;
     width: 30%;
     padding: 0 10px;
 }
+
 .columnBought {
     width: 50%;
     padding: 0 10px;
@@ -108,7 +115,9 @@ label {
 }
 
 /* Remove extra left and right margins, due to padding in columns */
-.row {margin: 5% 5% 5% 5%;}
+.row {
+    margin: 5% 5% 5% 5%;
+}
 
 /* Clear floats after the columns */
 .row:after {
@@ -118,19 +127,24 @@ label {
 }
 
 /* Style the counter cards */
-.card{
+.card {
     padding: 16px;
     text-align: center;
     background-color: #000000;
     height: 100%;
 }
-.cardH1{
-    color: var(--primary-color) ;
+
+.cardH1 {
+    color: var(--primary-color);
     text-shadow: 0 1px 0 rgba(255, 210, 0, 0);
 
 }
-.link-footer{
+
+.link-footer {
     color: var(--primary-color) !important;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.0);
+    text-align: center;
+    padding: 0.5%;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */

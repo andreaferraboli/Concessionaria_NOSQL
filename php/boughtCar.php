@@ -9,10 +9,14 @@
 
 <h3 class="title">Auto Comprata</h3>
 <?php
+//verifico che sia stato inviato il form
 if (isset($_POST['submit2'])) {
     $id = $_POST['id_macchina'];
+    //creo una connessione
     $conn = new mysqli('localhost', 'root', '', 'macchine_tpi');
+    //creo la query
     $sql = "SELECT * FROM macchine where macchine.id_macchina=" . $id;
+    //metto i risultati in un array
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
 
@@ -31,8 +35,10 @@ if (isset($_POST['submit2'])) {
         echo "$conn->connect_error";
         die("Connection Failed : " . $conn->connect_error);
     } else {
+        //compro la macchina
         $sql = "DELETE FROM macchine WHERE id_macchina=" . $id;
         if (mysqli_query($conn, $sql)) {
+            //costruisco il div per la macchina comprata
             echo '<div class="containerCard">';
             $nameCar = $brand . "-" . $modello;
             echo '<div class="columnBought">';
