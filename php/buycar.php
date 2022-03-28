@@ -4,10 +4,14 @@
     <meta charset="utf-8">
 
     <link rel="stylesheet" href="../css/buycar.css">
+    <title>buycar</title>
 </head>
 <body>
 
 <h3 class="title">Compra la tua auto!</h3>
+
+
+
 <?php
 $brand = $_POST['brand'];
 $modello = $_POST['modello'];

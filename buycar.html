@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -14,7 +13,7 @@
 <h3 class="title">Compra la tua auto!</h3>
 
 <div class="container">
-    <form name="choseform" method="post" action="php/buycar.php">
+    <form name="choseform">
         <label for="brand">Marca</label>
         <select id="brand" name="brand">
             <option value="qualsiasi">qualsiasi</option>
@@ -46,7 +45,7 @@
                        class="input">
             </div>
         </div>
-        <button class="cardButton" type="submit" value="Submit" name="submit1">submit</button>
+        <button id="submit" class="cardButton" type="submit" value="Submit" name="submit1">submit</button>
         <button class="reset" type="reset" value="Reset">reset</button>
     </form>
 </div>
@@ -56,6 +55,89 @@
     <a href="buycar.html" TARGET="_self" class="link-footer">Compra Auto</a>
     <a href="updatecar.html" TARGET="_self" class="link-footer">Aggiorna Auto</a>
 </footer>
+<script type="module">
+    var submitButton = document.getElementById("button");
+    // Import the functions you need from the SDKs you need
+    import {initializeApp} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+    import {getAnalytics} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyBqDnR4PbLbDOCm74UB0r0epcKJzXCgOE8",
+        authDomain: "concessionaria-d1c56.firebaseapp.com",
+        databaseURL: "https://concessionaria-d1c56-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "concessionaria-d1c56",
+        storageBucket: "concessionaria-d1c56.appspot.com",
+        messagingSenderId: "798338321372",
+        appId: "1:798338321372:web:4d970d0ee46f6288151d19",
+        measurementId: "G-D02J0DQJ0P"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    import {getDatabase, ref,get,push, set, child, update} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+
+    const database = getDatabase();
+    // ref.on("value",function (snapshot){
+    //     snapshot.forEach(function(childSnapShot) {
+    //         let data= childSnapShot.val();
+    //         console.log(data)
+    //
+    //     })
+    // })
+    function insertData() {
+        let brand = document.getElementById("brand");
+        let modello = document.getElementById("modello");
+        let kilometraggio = document.getElementById("kilometraggio");
+        let condizione = document.getElementById("condizione");
+        let cavalli = document.getElementById("cavalli");
+        let prezzo = document.getElementById("prezzo");
+
+        set(ref(database, 'macchine/' + 8), {
+            "brand": brand.value,
+            "modello": modello.value,
+            "kilometraggio": kilometraggio.value,
+            "condizione": condizione.value,
+            "cavalli": cavalli.value,
+            "prezzo": prezzo.value
+        }).then(() => alert("data stored successfully")).catch((error) => {
+            alert("unseccessful, error" + error);
+        });
+    }
+
+    function writeNewPost(uid, username, picture, title, body) {
+
+        // A post entry.
+
+        const postData = {
+            author: username,
+            uid: uid,
+            body: body,
+            title: title,
+            starCount: 0,
+            authorPic: picture
+        };
+        // Get a key for a new Post.
+
+        const newPostKey = push(child(ref(database), 'posts')).key;
+        // Write the new post's data simultaneously in the posts list and the user's post list.
+
+        const updates = {};
+        updates['/posts/' + newPostKey] = postData;
+        updates['/user-posts/' + uid + '/' + newPostKey] = postData;
+        return update(ref(database), updates);
+
+    }
+    if (submitButton){
+        submitButton.addEventListener('click', insertData);
+    }
+</script>
 </body>
+
 </html>
 <script src="js/buycar.js" defer></script>
